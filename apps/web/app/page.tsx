@@ -1,6 +1,7 @@
 import Image, { type ImageProps } from "next/image";
 import styles from "./page.module.css";
-import { JSX } from "react";
+import type { ReactNode } from "react";
+// import { JSX } from "react";
 
 type Props = Omit<ImageProps, "src"> & {
   srcLight: string;
@@ -18,7 +19,7 @@ const ThemeImage = (props: Props) => {
   );
 };
 
-export default function Home() {
+export default function Home(): ReactNode {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
@@ -63,7 +64,6 @@ export default function Home() {
             Read our docs
           </a>
         </div>
-
       </main>
       <footer className={styles.footer}>
         <a
